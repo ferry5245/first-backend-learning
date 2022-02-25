@@ -20,7 +20,7 @@
         // include database connection file
         include_once("config.php");
         // Insert user data into table
-        $result = mysqli_query($mysqli, "INSERT INTO ItemType(item_type) VALUES($item_type)");
+        $result = mysqli_query($mysqli, "INSERT INTO ItemType(item_type) VALUES('$item_type')");
         // Show message when user added
         echo "Item added successfully. <a href='index.php'>View Users</a>";
     }

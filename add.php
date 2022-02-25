@@ -41,7 +41,7 @@
         include_once("config.php");
         // mysqli_query($conn,"SET FOREIGN_KEY_CHECKS=0;");
         // Insert user data into table
-        $result = mysqli_query($mysqli, "INSERT INTO Toko(item_name,brand_id,Price,types_id,Specification,Descriptions) VALUES($item_name,$brand_id,$Price,$types_id,$Specification,$Descriptions)");
+        $result = mysqli_query($mysqli, "INSERT INTO Toko(item_name,brand_id,Price,types_id,Specification,Descriptions) VALUES('$item_name','$brand_id','$Price','$types_id','$Specification','$Descriptions')");
         // mysqli_query($conn,"SET FOREIGN_KEY_CHECKS=1;");
         // Show message when user added
         echo "Item added successfully. <a href='index.php'>View Users</a>";

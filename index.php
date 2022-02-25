@@ -3,7 +3,7 @@
 include_once("config.php");
  
 // Fetch all users data from database
-$result = mysqli_query($mysqli, "SELECT * FROM Toko ORDER BY ID DESC");
+$result = mysqli_query($mysqli, "SELECT * FROM Toko ORDER BY ID ASC");
 ?>
  
 <html>
@@ -37,7 +37,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Toko ORDER BY ID DESC");
         echo "<td>".$user_data['types_id']."</td>";    
         echo "<td>".$user_data['Specification']."</td>";    
         echo "<td>".$user_data['Descriptions']."</td>";    
-        // echo "<td><a href='edit.php?id=$user_data[id]'>Edit</a> | <a href='delete.php?id=$user_data[id]'>Delete</a></td></tr>";        
+        echo "<td><a href='edit.php?id=$user_data[ID]'>Edit</a> | <a href='delete.php?ID=$user_data[ID]'>Delete</a></td></tr>";        
     }
     ?>
     </table>

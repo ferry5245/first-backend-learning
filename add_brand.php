@@ -16,13 +16,15 @@
     // Check If form submitted, insert form data into users table.
     if(isset($_POST['submit'])) {
         $BrandName   = $_POST['BrandName'];
-        
+        echo "$BrandName";
         // include database connection file
         include_once("config.php");
         // Insert user data into table
-        $result = mysqli_query($mysqli, "INSERT INTO Brand(BrandName) VALUES($BrandName)");
+        $result = mysqli_query($mysqli, "INSERT INTO Brand(BrandName) VALUES('$BrandName')");
         // Show message when user added
+        print_r($mysqli);
         echo "Item added successfully. <a href='index.php'>View Users</a>";
+        
     }
     ?>
 </body>

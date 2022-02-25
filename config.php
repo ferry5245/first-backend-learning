@@ -4,7 +4,7 @@
  */
  
 $databaseHost = 'localhost';
-$databaseName = 'mydatabase';
+$databaseName = 'MyDatabase';
 $databaseUsername = 'root';
 $databasePassword = '';
  

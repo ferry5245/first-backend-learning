@@ -1,6 +1,6 @@
 CREATE DATABASE MyDatabase;
 USE MyDatabase;
-
+SHOW databases;
 CREATE TABLE Brand(
 	ID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     BrandName varchar(255)
@@ -28,12 +28,12 @@ INSERT INTO Toko (ID,item_name,brand_id,Price,types_id,Specification,Description
 	VALUES
 		(1,'Lenovo T440p',1,8000000,1,'Intel Core i5','Laptopnya bagus');
 SET FOREIGN_KEY_CHECKS=1;        
-INSERT INTO ItemType (ID,item_type) VALUES (1,'Laptop'),(2,'Phone'),(3,'Accessory');
+INSERT INTO ItemType (ID,item_type) VALUES (1,'Laptop'),(2,'Accessory'),(3,'Phone');
 INSERT INTO Brand (ID,BrandName) VALUES (1,'Lenovo'),(2,'Asus'),(3,'HP'),(4,'Acer');
 
 SELECT * FROM Toko;
 select * FROM Brand;
 select * FROM ItemType;
-DROP DATABASE MyDatabase;
+#DROP DATABASE MyDatabase;
 #DROP TABLE Toko;
 #DROP TABLE Brand;
